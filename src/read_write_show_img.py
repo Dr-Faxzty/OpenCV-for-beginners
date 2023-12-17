@@ -14,7 +14,7 @@ img = cv2.imread("src/assets/orso.png", 1) # 0 = grayscale = cv2.IMREAD_GRAYSCAL
 #print(img) # print image as matrix of pixels (0-255) -> 0 = black, 255 = white
 
 # write image
-#cv2.imwrite('assets/orso_copy.png', img)  
+#cv2.imwrite("src/assets/orso_copy.png", img)  
 # write image to file (path, image) -> image must be in BGR format (not RGB) -> if you want to save it in RGB format, you have to convert it first
 
 
