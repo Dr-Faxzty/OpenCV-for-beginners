@@ -1,5 +1,4 @@
 import cv2
-import numpy as np
 
 # read image
 img = cv2.imread("src/assets/orso.png", 1) # 0 = grayscale = cv2.IMREAD_GRAYSCALE -- 1 = color = cv2.IMREAD_COLOR -- -1 = unchanged = cv2.IMREAD_UNCHANGED -> include alpha channel
