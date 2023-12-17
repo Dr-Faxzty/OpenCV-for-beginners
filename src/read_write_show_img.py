@@ -1,7 +1,7 @@
 import cv2
 
 # read image
-img = cv2.imread("src/assets/orso.png", 1) # 0 = grayscale = cv2.IMREAD_GRAYSCALE -- 1 = color = cv2.IMREAD_COLOR -- -1 = unchanged = cv2.IMREAD_UNCHANGED -> include alpha channel
+img = cv2.imread("src/assets/HappyFish.jpg", 1) # 0 = grayscale = cv2.IMREAD_GRAYSCALE -- 1 = color = cv2.IMREAD_COLOR -- -1 = unchanged = cv2.IMREAD_UNCHANGED -> include alpha channel
 # color channels: BGR (Blue, Green, Red) -> OpenCV uses BGR format instead of RGB format because it was developed by Intel and they used BGR format for their cameras
 
 # to convert BGR to RGB format -> good practice
@@ -31,7 +31,7 @@ key = cv2.waitKey(0)
 if key == 27:
     cv2.destroyAllWindows()
 elif key == ord('s'):
-    cv2.imwrite("src/assets/orso_copy_2.png", img)
+    cv2.imwrite("src/assets/HappyFish_copy.jpg", img)
     cv2.destroyAllWindows()
 '''
 
