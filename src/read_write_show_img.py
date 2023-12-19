@@ -1,11 +1,11 @@
 import cv2
 
 # read image
-img = cv2.imread("src/assets/orso.png", 1) # 0 = grayscale = cv2.IMREAD_GRAYSCALE -- 1 = color = cv2.IMREAD_COLOR -- -1 = unchanged = cv2.IMREAD_UNCHANGED -> include alpha channel
+img = cv2.imread("assets/img/orso.png", 1) # 0 = grayscale = cv2.IMREAD_GRAYSCALE -- 1 = color = cv2.IMREAD_COLOR -- -1 = unchanged = cv2.IMREAD_UNCHANGED -> include alpha channel
 # color channels: BGR (Blue, Green, Red) -> OpenCV uses BGR format instead of RGB format because it was developed by Intel and they used BGR format for their cameras
 
 # to convert BGR to RGB format -> good practice
-#img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
 # why BGR format? -> https://learnopencv.com/why-does-opencv-use-bgr-color-format/
 
@@ -13,9 +13,27 @@ img = cv2.imread("src/assets/orso.png", 1) # 0 = grayscale = cv2.IMREAD_GRAYSCAL
 #print(img) # print image as matrix of pixels (0-255) -> 0 = black, 255 = white
 
 # write image
-#cv2.imwrite("src/assets/orso_copy.png", img)  
+cv2.imwrite("assets/saved_frames/orso_copy.png", img)  
 # write image to file (path, image) -> image is in BGR format (not RGB) -> if you want to save it in RGB format, you have to convert it first
 
+
+# resize image
+scale_percent = 50 # percent of original size
+width = int(img.shape[1] * scale_percent / 100)
+height = int(img.shape[0] * scale_percent / 100)
+dim = (width, height)
+
+img = cv2.resize(img, dim, interpolation = cv2.INTER_AREA)
+# (image, dsize, fx[optional], fy[optional], interpolation[optional]) -> dsize = desired size (width, height) 
+# -> fx = scale factor along the horizontal axis -> fy = scale factor along the vertical axis 
+# -> interpolation = interpolation method used to resize the image (INTER_AREA = good for shrinking, INTER_CUBIC = good for zooming)
+
+
+# rotate image
+img = cv2.rotate(img, cv2.ROTATE_90_CLOCKWISE) # rotate clockwise
+img = cv2.rotate(img, cv2.ROTATE_90_COUNTERCLOCKWISE) # rotate counterclockwise
+img = cv2.rotate(img, cv2.ROTATE_180) # rotate 180 degrees
+# (image, rotateCode) -> rotateCode = flag that takes 3 values (ROTATE_90_CLOCKWISE, ROTATE_90_COUNTERCLOCKWISE, ROTATE_180)
 
 # show image
 cv2.imshow('Happy Orso', img)
@@ -31,7 +49,7 @@ key = cv2.waitKey(0)
 if key == 27:
     cv2.destroyAllWindows()
 elif key == ord('s'):
-    cv2.imwrite("src/assets/orso_copy_2.png", img)
+    cv2.imwrite("assets/saved_frames/orso_copy_2.png", img)
     cv2.destroyAllWindows()
 '''
 
