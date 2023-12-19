@@ -20,7 +20,7 @@ while True:  # you can also use while(cap.isOpened()):
     #cap.get(cv2.CAP_PROP_FRAME_HEIGHT) # returns the height of the frame
     
     # convert frame to grayscale
-    #gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    #grayImg = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     
     
     # show the frame
