@@ -5,7 +5,7 @@ import cv2
 img = cv2.imread("/home/dr_faxzty/Desktop/scuola/PON ecc/Rescue Line/2024/OpenCV-for-beginners/src/assets/img/HappyFish.jpg", 1)
 
 #create img with numpy
-img =  np.zeros([312, 312, 3], np.uint8) 
+img =  np.zeros([312, 312, 3], np.uint8) # it creates a black image with 312x312 pixels and 3 channels (BGR)
 # np.zeros([height, width, channels], data_type) 
 # -> channels = 3 (BGR) or 1 (grayscale)
 # -> data_type = np.uint8 (unsigned integer 8 bit) -> 0 = black, 255 = white
