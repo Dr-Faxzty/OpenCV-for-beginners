@@ -51,7 +51,7 @@ def click_event3(event, x, y, flags, param):
         
         
 #img = np.zeros((512, 512, 3), np.uint8)
-img = cv2.imread("assets/img/HappyFish.jpg")
+img = cv2.imread("assets/img/lena.jpg")
 cv2.imshow("image", img)
 
 points = []

@@ -2,7 +2,7 @@ import numpy as np
 import cv2
 
 
-img = cv2.imread("/home/dr_faxzty/Desktop/scuola/PON ecc/Rescue Line/2024/OpenCV-for-beginners/src/assets/img/HappyFish.jpg", 1)
+img = cv2.imread("assets/img/lena.jpg", 1)
 
 #create img with numpy
 img =  np.zeros([312, 312, 3], np.uint8) # it creates a black image with 312x312 pixels and 3 channels (BGR)
@@ -57,7 +57,7 @@ img = cv2.circle(img, center, radius, (255, 255, 0), 5)
 
 
 # draw a text on the image
-text = "Happy Fish"
+text = "Happy Lena"
 start_point = (x // 2 - 75, y - 50)
 font = cv2.FONT_HERSHEY_SIMPLEX
 font_scale = 1
