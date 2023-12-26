@@ -39,11 +39,11 @@ bit_not1 = 255 - img1
 
 # funny trick: bitwise OR
 bit_or = img1 | img2
-# this is because the maximum value of a pixel is 255, so if both pixels are 255, then the result is 255 (1) else it is 0 (0)
+
 
 # funny trick: bitwise AND
 bit_and = img1 & img2
-# this is because the minimum value of a pixel is 0, so if both pixels are 0, then the result is 0 (0) else it is 255 (1)
+
 
 # funny trick: bitwise XOR
 bit_xor = (img1 | img2) - (img1 & img2)
