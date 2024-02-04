@@ -52,7 +52,7 @@ while True:
     # For that we need to convert the image to HSV color space
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
     
-    # Now we need to define the range of blue color in HSV dynamically using the trackbar
+    # Now we need to define the range of a color in HSV dynamically using the trackbar
     l_h = cv2.getTrackbarPos("LH", "Tracking")
     l_s = cv2.getTrackbarPos("LS", "Tracking")
     l_v = cv2.getTrackbarPos("LV", "Tracking")
@@ -62,17 +62,17 @@ while True:
     u_v = cv2.getTrackbarPos("UV", "Tracking")
     
     
-    # Now we need to define the range of blue color in HSV
-    l_b = np.array([l_h, l_s, l_v]) # lower bound of blue color -> means the minimum value of color in HSV color space
-    u_b = np.array([u_h, u_s, u_v]) # upper bound of blue color -> means the maximum value of color in HSV color space
+    # Now we need to define the range of the color in HSV
+    l_b = np.array([l_h, l_s, l_v]) # lower bound of color -> means the minimum value of color in HSV color space
+    u_b = np.array([u_h, u_s, u_v]) # upper bound of color -> means the maximum value of color in HSV color space
     
     
-    # Now we have to threshold the HSV image to get only blue colors
+    # Now we have to threshold the HSV image to get only the colors within the range
     # thresholding is the process of converting an image to a binary image (black and white image)
-    mask = cv2.inRange(hsv, l_b, u_b) # mask is the thresholded image of the original image which contains only the blue color
+    mask = cv2.inRange(hsv, l_b, u_b) # mask is the thresholded image of the original image which contains only the needed color
     
     # Now we need to bitwise AND the original image and the mask
-    res = cv2.bitwise_and(frame, frame, mask=mask) # res is the image which contains only the blue color
+    res = cv2.bitwise_and(frame, frame, mask=mask) # res is the image which contains only the needed color
     
     
     cv2.imshow("frame", frame)
