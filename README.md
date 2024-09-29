@@ -1,5 +1,5 @@
 
-<div align="center"><a href="https://docs.opencv.org/4.x/"><img src="https://branditechture.agency/brand-logos/wp-content/uploads/wpdm-cache/OpenCV-01-900x0.png" alt="Logo" width="400" height="200"></a></div>
+<div align="center"><a href="https://docs.opencv.org/4.x/opencv-logo-small.png"><img src="https://branditechture.agency/brand-logos/wp-content/uploads/wpdm-cache/OpenCV-01-900x0.png" alt="Logo" width="400" height="200"></a></div>
 
 # OpenCV for beginners 
 
