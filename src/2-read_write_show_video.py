@@ -4,7 +4,7 @@ cap = cv2.VideoCapture(0) # 0 = default camera -- 1 = external camera
 #cap = cv2.VideoCapture('video.mp4') # for video file 
 
 # save video 
-out = cv2.VideoWriter("src/assets/saved_frames/output.avi", cv2.VideoWriter_fourcc('M','J','P','G'), 10, (640,480)) 
+out = cv2.VideoWriter("assets/saved_frames/output.avi", cv2.VideoWriter_fourcc('M','J','P','G'), 10, (640,480)) 
 # (path, codec, fps, size) -> codec = 4-character code of codec used to compress the frames (eg. XVID, MJPG, DIVX, X264, WMV1, WMV2) -> fps = frames per second -> size = width and height of the frames in the video
 
 # you can also use the following syntax to save video

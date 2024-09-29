@@ -44,7 +44,7 @@ cv2.createTrackbar("UV", "Tracking", 255, 255, nothing) # UV = Upper Value
 
 
 while True:
-    frame = cv2.imread("/home/dr_faxzty/Desktop/scuola/PON ecc/Rescue Line/2024/OpenCV-for-beginners/src/assets/img/smarties.png")
+    frame = cv2.imread("assets/img/smarties.png")
     #_, frame = cap.read()
     
     # Let's say we want to detect only the blue color in the image
