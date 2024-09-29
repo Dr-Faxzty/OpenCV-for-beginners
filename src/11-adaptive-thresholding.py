@@ -11,7 +11,7 @@ import numpy as np
 # So this method is used to overcome this problem and to get better results
 
 
-img = cv.imread("/home/drfaxzty/Documents/PROJECTS/OpenCV-for-beginners/src/assets/img/sudoku.png", 0)
+img = cv.imread("assets/img/sudoku.png", 0)
 
 # If we show the image, we can see that the image contains different lighting conditions in different regions
 # and we will see half of the image is bright and the other half is dark
